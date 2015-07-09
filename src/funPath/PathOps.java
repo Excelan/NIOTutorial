@@ -5,7 +5,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PathOperationsFun {
+public class PathOps {
 	
 	
 	// None of these methods requires that the file corresponding
