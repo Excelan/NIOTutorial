@@ -1,4 +1,4 @@
-import funPath.PathInfoRetrieving;
+import funPath.PathOperationsFun;
 
 public class Run {
 
@@ -15,7 +15,7 @@ public class Run {
 
 	private static void runExample(int example) {
 		switch (example) {
-		case 1: PathInfoRetrieving.run();
+		case 1: PathOperationsFun.run();
 			break;
 		default:
 			break;

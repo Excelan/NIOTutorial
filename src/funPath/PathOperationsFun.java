@@ -5,7 +5,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PathInfoRetrieving {
+public class PathOperationsFun {
 	
 	
 	// None of these methods requires that the file corresponding
@@ -39,6 +39,16 @@ public class PathInfoRetrieving {
 		
 		System.out.format("path.toUri(): %s%n", path.toUri());
 		System.out.format("path.toAbsolutePath(): %s%n", path.toAbsolutePath());
+		
+		System.out.println(" Path is iterable:");
+		for (Path name: path.toAbsolutePath()) {
+		    System.out.println(name);
+		}
+		System.out.println();
+		//combining / join
+		System.out.format("%s%n", path.resolve("bar-is-joined-by-resolve"));
+		// Passing an absolute path to the resolve method returns the passed-in path:
+		System.out.format("%s%n", path.resolve("c://absolute-bar-is-joined-by-resolve"));
 		
 		System.out.println();
 	}
