@@ -11,6 +11,31 @@ public class Run {
 			runExample(example);
 		} catch (NumberFormatException e) {
 			System.out.println("Integer argument is required");
+			
+			
+
+			/*
+			int choice = 0;
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+			do {
+				System.out.format("1. Path example");
+				System.out.format("2. File example");
+				System.out.format("3. Tree example");
+				System.out.format("0. EXIT");
+				
+				 try{
+					 choice = Integer.parseInt(br.readLine());
+			        } catch(NumberFormatException nfe) {
+			            System.err.println("Invalid Format!");
+			        }
+				
+			} while (choice!=0);
+			*/
+			
+			
+			
 		}
 	}
 

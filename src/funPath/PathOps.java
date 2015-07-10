@@ -1,9 +1,12 @@
 package funPath;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.AclEntry;
+import java.nio.file.attribute.AclFileAttributeView;
 
 public class PathOps {
 	
@@ -23,7 +26,24 @@ public class PathOps {
 		//some real path
 		Path path = Paths.get("..//NIOTutorial//src//funPath//package-info.java");
 		printPathInfo(path, "Real, redundant path example:");
+		printPathAcl(path);		
 		funRealPath(path);
+	}
+	
+	public static void printPathAcl(Path file) {
+		System.out.format("*** ACL for %s%n", file);
+		AclFileAttributeView aclFileAttributes = Files.getFileAttributeView(
+		    file, AclFileAttributeView.class);
+
+		try {
+			for (AclEntry aclEntry : aclFileAttributes.getAcl()) {
+			    System.out.println(aclEntry.principal() + ":");
+			    System.out.println(aclEntry.permissions() + "\n");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void printPathInfo(Path path, String comment) {
