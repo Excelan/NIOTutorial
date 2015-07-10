@@ -16,8 +16,7 @@ public class Run {
 	private static void runExample(int example) {
 		System.out.format("EXAMPLE %s%n", example);
 		switch (example) {
-		case 1: PathOps.run();
-			break;
+		case 1: PathOps.run(); break;
 		case 2: FileOps.run(); break;
 		default:
 			break;
