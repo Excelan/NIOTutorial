@@ -1,5 +1,6 @@
 import funFile.FileOps;
 import funPath.PathOps;
+import funTree.TreeOps;
 
 public class Run {
 	public static void main(String[] args) {
@@ -18,6 +19,7 @@ public class Run {
 		switch (example) {
 		case 1: PathOps.run(); break;
 		case 2: FileOps.run(); break;
+		case 3: TreeOps.run(); break;
 		default:
 			break;
 		}
