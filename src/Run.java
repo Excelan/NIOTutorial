@@ -24,9 +24,10 @@ public class Run {
 		case 0: System.exit(0); break;
 		case 1: PathOps.run(); break;
 		case 2: FileOps.run(); break;
-		case 3: TreeOps.run(); break;
+		case 3: new TreeOps(); break;
 		default:
 			break;
 		}
+		System.out.println("******************"+Thread.currentThread().getName());
 	}
 }
